@@ -6,5 +6,3 @@ const getTheLongestWord = word => {
 	return word && word.split(' ').reduce(
 		(accumulator, currentValue) => accumulator.length > currentValue.length ? accumulator : currentValue);
 }
-
-console.log(getTheLongestWord(text))
