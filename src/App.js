@@ -1,7 +1,7 @@
 import Widget from './components/Widget/Widget.jsx'
 import './reset.css'
 
-function App() {
+function App () {
   return <Widget />;
 }
 

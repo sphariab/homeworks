@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
-import TodoList from "../TodoList/TodoList";
-import Controls from "../Controls/Controls";
-import './Widget.scss'
+import ContactList from "../ContactList";
+import Button from '../Button';
+import Form from '../Form';
+import './styles.scss'
+
 
 class Widget extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			todos: []
+			isShowForm: false,
+			contacts: [],
 		}
 	}
 
-	saveTodo = todo => this.setState({ todos: [...this.state.todos, todo]});
+	deleteContact = id => this.setState({ contacts: this.state.contacts.filter(contact => contact.id !== id)});
 
-	deleteTodo = id => this.setState({ todos: this.state.todos.filter(todo => todo.id !== id)});
+	addContact = () => this.setState({ isShowForm: true });
+
+	closeForm = () => this.setState({ isShowForm: false });
+
+	saveContact = contact => {
+		const { contacts = []} = this.state;
+
+		this.setState({ contacts: [...contacts, contact] });
+		this.closeForm();
+	}
 
 	render () {
-		const { todos } = this.state;
+		const { contacts, isShowForm } = this.state;
+
 		return (
 			<div className='widget'>
-				<TodoList todos={todos} deleteTodo={this.deleteTodo} />
-				<Controls saveTodo={this.saveTodo} />
+				<h4>Address book</h4>
+				<ContactList contacts={contacts} deleteContact={this.deleteContact} />
+				{!isShowForm && <Button text='Add Contact' onClick={this.addContact} />}
+				{isShowForm && <Form closeForm={this.closeForm} contacts={contacts} saveContact={this.saveContact} />}
 			</div>
 		)
 	}
