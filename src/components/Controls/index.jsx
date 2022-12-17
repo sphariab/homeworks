@@ -4,17 +4,7 @@ import './styles.scss';
 
 
 class Controls extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isChanged: false,
-		}
-	}
-
-	onCancel = () => {
-		this.setState({ isChanged: false });
-		this.props.closeForm();
-	}
+	onCancel = () => this.props.closeForm();
 
 	render () {
 		return (
