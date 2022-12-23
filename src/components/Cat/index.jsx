@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { generateRandomNumber } from "../../utils";
 import './styles.scss'
 
 
@@ -6,8 +7,8 @@ class Cat extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			x: Math.random() * 600,
-			y: Math.random() * 600,
+			x: generateRandomNumber() * 600,
+			y: generateRandomNumber() * 600,
 		}
 	}
 	render () {
@@ -17,7 +18,7 @@ class Cat extends Component {
 		return (
 			<div
 				className='cat'
-				style={{ left: clientX + x, top: clientY + y, transition: ` all ${Math.random() + 1}s ease-out` }}
+				style={{ left: clientX + x, top: clientY + y, transition: ` all ${generateRandomNumber() + 1}s ease-out` }}
 			>
 					{children}
 			</div>

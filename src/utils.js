@@ -1,1 +1,1 @@
-export const generateId = () =>  Date.now();
+export const generateRandomNumber = () =>  Math.random();
