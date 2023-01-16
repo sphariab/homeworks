@@ -1,0 +1,19 @@
+.form{
+  width: 100%;
+   max-width: 400px;
+
+  &__input-wrapper{
+    margin-bottom: 13px;
+    display: block;
+    position: relative;
+  }
+
+  &__error-message{
+    opacity: 0;
+    font-size: 11px;
+    color: red;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+  }
+}
