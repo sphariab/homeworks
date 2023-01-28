@@ -1,0 +1,22 @@
+.todo{
+  cursor: pointer;
+  padding: 5px 0 10px 20px;
+  text-align: left;
+  width: 100%;
+  position: relative;
+
+  &_completed{
+    color: #EADDCA;
+    text-decoration: line-through;
+  }
+
+  &_delete{
+    &:after{
+      content: "\00d7";
+      position: absolute;
+      right: 10px;
+      font-size: 20px;
+      top: 1px;
+    }
+  }
+}
