@@ -1,0 +1,28 @@
+.contact{
+  &__row{
+    display: flex;
+    border-bottom: 1px solid #dadada;
+  }
+
+  &__cell{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+
+  &_delete{
+    position: relative;
+
+    &:after{
+      content: "\00d7";
+      color: red;
+      position: absolute;
+      right: calc(50% - 5px);
+      font-size: 20px;
+      top: calc(50% - 14px);
+      cursor: pointer;
+    }
+  }
+}
