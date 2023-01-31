@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Contact from "../Contact";
 import { connect } from "react-redux";
 import { deleteUser } from "../../api";
-import { generateId } from "../../utils";
+import { generateKey } from "../../utils";
 import './styles.scss'
 
 
@@ -18,7 +18,7 @@ const ContactList = ({ contacts, deleteUser }) => (
 					<th className='contact__cell' >Phone</th>
 					<th className='contact__cell' >Action</th>
 				</tr>
-				{contacts && contacts.map(item => <Contact item={item} key={generateId()} deleteUser={deleteUser} />)}
+				{contacts && contacts.map(item => <Contact item={item} key={generateKey()} deleteUser={deleteUser} />)}
 			</table>
 		)}
 		{!contacts.length && (<p>There are no contacts</p>)}
