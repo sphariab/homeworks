@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sphariab/homeworks/static/css/main.bfead075.css",
-    "main.js": "/sphariab/homeworks/static/js/main.d55f63b7.js",
-    "index.html": "/sphariab/homeworks/index.html",
-    "main.bfead075.css.map": "/sphariab/homeworks/static/css/main.bfead075.css.map",
-    "main.d55f63b7.js.map": "/sphariab/homeworks/static/js/main.d55f63b7.js.map"
+    "main.css": "/static/css/main.bfead075.css",
+    "main.js": "/static/js/main.d55f63b7.js",
+    "index.html": "/index.html",
+    "main.bfead075.css.map": "/static/css/main.bfead075.css.map",
+    "main.d55f63b7.js.map": "/static/js/main.d55f63b7.js.map"
   },
   "entrypoints": [
     "static/css/main.bfead075.css",
