@@ -1,0 +1,17 @@
+.button{
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+
+  &__green{
+    background-color: #50C878;
+
+    &.button__disabled{
+      background-color: #AFE1AF;
+    }
+  }
+
+  &__red{
+    background-color: indianred;
+  }
+}

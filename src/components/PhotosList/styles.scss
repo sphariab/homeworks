@@ -1,0 +1,9 @@
+.photo {
+  &__image {
+    width: 50px;
+  }
+
+  &__container{
+    display: flex;
+  }
+}

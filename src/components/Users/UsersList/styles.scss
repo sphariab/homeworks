@@ -1,0 +1,20 @@
+.user {
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+
+  &__add-btn{
+    max-width: 150px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}
