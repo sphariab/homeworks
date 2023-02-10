@@ -17,7 +17,7 @@ const UsersList = ({ users, deleteUser, getUsers }) => {
 		<>
 			<div className='user__container'>
 				<ul className='user__list'>
-					<NavLink to='/users/add' className='button button_green m-b'>Add user</NavLink>
+					<NavLink to={`${process.env.PUBLIC_URL}/users/add`} className='button button_green m-b'>Add user</NavLink>
 					{users && users.map(item => <User item={item} key={generateKey()} deleteUser={deleteUser} />)}
 					{users && !users.length && (<p>There are no users</p>)}
 				</ul>

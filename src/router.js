@@ -6,40 +6,41 @@ import AlbumsList from "./components/Albums/AlbumsList";
 import PhotosList from "./components/PhotosList";
 import Form from "./components/Users/Form";
 
+console.log(process.env.PUBLIC_URL)
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${process.env.PUBLIC_URL}/`,
     element: <App />,
     children: [
       {
-        path: "/users",
+        path: `${process.env.PUBLIC_URL}/users`,
         element: <UsersList />,
         children: [
           {
-            path: "/users/:id/edit",
+            path: `${process.env.PUBLIC_URL}/users/:id/edit`,
             element: <Form />,
           },
           {
-            path: "/users/add",
+            path: `${process.env.PUBLIC_URL}/users/add`,
             element: <Form />,
           }
         ]
       },
       {
-        path: "/users/:id",
+        path: `${process.env.PUBLIC_URL}/users/:id`,
         element: <UserDetail />,
       },
       {
-        path: "/users/:id/albums",
+        path: `${process.env.PUBLIC_URL}/users/:id/albums`,
         element: <AlbumsList />,
       },
       {
-        path: "/albums",
+        path: `${process.env.PUBLIC_URL}/albums`,
         element: <AlbumsList />,
       },
       {
-        path: "/albums/:id/photos",
+        path: `${process.env.PUBLIC_URL}/albums/:id/photos`,
         element: <PhotosList />,
       }
     ]

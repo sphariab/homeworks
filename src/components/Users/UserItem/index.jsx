@@ -10,15 +10,15 @@ const UserItem = ({ item , deleteUser }) => (
 	<>
 		<li className='user__name'>
 			<div className='user__name-container'>
-				<NavLink to={`/users/${item.id}/albums`} className='m-r'>
+				<NavLink to={`${process.env.PUBLIC_URL}/users/${item.id}/albums`} className='m-r'>
 					<AlbumIcon />
 				</NavLink>
-				<NavLink to={`${item.id}`} >
+				<NavLink to={`${process.env.PUBLIC_URL}/users/${item.id}`} >
 					{item.name}
 				</NavLink>
 			</div>
 			<div className='user__controls'>
-				<Link to={`${item.id}/edit`} state={{ item }} className='button button_blue m-r'>Edit</Link>
+				<Link to={`${process.env.PUBLIC_URL}/users/${item.id}/edit`} state={{ item }} className='button button_blue m-r'>Edit</Link>
 				<Button text='Delete' onClick={() => deleteUser(item.id)} className='button button_red m-r' />
 			</div>
 		</li>

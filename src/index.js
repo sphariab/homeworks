@@ -25,3 +25,4 @@ root.render(
     <RouterProvider router={router} basename={window.location.pathname || ''} />
   </Provider>
 );
+console.log(window.location)

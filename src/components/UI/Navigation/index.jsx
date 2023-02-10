@@ -5,8 +5,8 @@ import './styles.scss'
 
 const Navigation = () => (
 	<ul className='navigation'>
-		<NavLink className={({ isActive }) => isActive ? 'active' : ''} to='users' end>Users</NavLink>
-		<NavLink className={({ isActive }) => isActive ? 'active' : ''} to='albums' end>Albums</NavLink>
+		<NavLink className={({ isActive }) => isActive ? 'active' : ''} to={`${process.env.PUBLIC_URL}/users`} end>Users</NavLink>
+		<NavLink className={({ isActive }) => isActive ? 'active' : ''} to={`${process.env.PUBLIC_URL}/albums`} end>Albums</NavLink>
 	</ul>
 );
 
