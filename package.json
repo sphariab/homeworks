@@ -2,7 +2,7 @@
   "name": "to-do-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sphariab.github.io/homeworks/",
+  "homepage": "https://github.com/sphariab/homeworks",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
