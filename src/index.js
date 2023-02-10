@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <RouterProvider router={router} basename={window.location.pathname || ''} />
+    <RouterProvider router={router} basename={process.env.PUBLIC_URL} />
   </Provider>
 );
 console.log(window.location)
