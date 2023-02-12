@@ -6,12 +6,12 @@
     margin-bottom: 15px;
 }
 
-.link a{
+a.link{
     color: rgb(51, 122, 183);
     text-decoration: none;
 }
 
-.link a:focus, .link a.link:hover {
+ a.link:focus, a.link:hover {
     color: rgb(35, 82, 124);
     text-decoration: underline;
 }
