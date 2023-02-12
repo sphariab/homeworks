@@ -5,3 +5,13 @@
 .m-b{
     margin-bottom: 15px;
 }
+
+a {
+    color: rgb(51, 122, 183);
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: rgb(35, 82, 124);
+    text-decoration: underline;
+}
