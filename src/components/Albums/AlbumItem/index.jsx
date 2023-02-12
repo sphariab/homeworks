@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import './styles.scss'
 
 
-const AlbumItem = ({ album }) => <NavLink to={`/albums/${album.id}/photos`}>{album.title}</NavLink>;
+const AlbumItem = ({ album }) => <NavLink to={`/albums/${album.id}/photos`} className='link'>{album.title}</NavLink>;
 
 
 AlbumItem.propTypes = {

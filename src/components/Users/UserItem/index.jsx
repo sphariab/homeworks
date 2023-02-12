@@ -17,11 +17,11 @@ const UserItem = ({ item , deleteUser }) => {
 		<>
 			<li className='user__name'>
 				<div className='user__name-container'>
-					<Link to={`/users/${item.id}/albums`} className='m-r'><AlbumIcon /></Link>
-					<Link to={`/users/${item.id}`}>{item.name}</Link>
+					<Link to={`/users/${item.id}/albums`} className='m-r link'><AlbumIcon /></Link>
+					<Link to={`/users/${item.id}`} className='link'>{item.name}</Link>
 				</div>
 				<div className='user__controls'>
-					<Link to={{pathname: `/users/${item.id}/edit`, state: { item } }}  className='button button_blue m-r'>Edit</Link>
+					<Link to={{pathname: `/users/${item.id}/edit`, state: { item } }} className='button button_blue m-r'>Edit</Link>
 					<Button text='Delete' onClick={onDelete} className='button button_red m-r' />
 				</div>
 			</li>
