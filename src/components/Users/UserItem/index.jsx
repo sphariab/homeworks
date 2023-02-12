@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import { Link, useHistory } from "react-router-dom";
 import Button from '../../UI/Button';
 import AlbumIcon from "../../../icons/AlbumIcon";
+import AlbumOpenIcon from "../../../icons/AlbumOpenIcon";
 import './styles.scss';
 
 
 const UserItem = ({ item , deleteUser }) => {
+	const [isActive, setActive] = useState(false);
 	const history = useHistory();
 	const onDelete = () => {
 		deleteUser(item.id)
@@ -17,7 +19,13 @@ const UserItem = ({ item , deleteUser }) => {
 		<>
 			<li className='user__name'>
 				<div className='user__name-container'>
-					<Link to={`/users/${item.id}/albums`} className='m-r link'><AlbumIcon /></Link>
+					<Link to={`/users/${item.id}/albums`}
+								className='m-r link'
+								onMouseEnter={() => setActive(true)}
+								onMouseLeave={() => setActive(false)}
+					>
+						{isActive ? <AlbumOpenIcon /> : <AlbumIcon />}
+					</Link>
 					<Link to={`/users/${item.id}`} className='link'>{item.name}</Link>
 				</div>
 				<div className='user__controls'>
