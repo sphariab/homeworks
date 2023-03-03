@@ -1,0 +1,19 @@
+.user{
+  &__name{
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-container{
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__controls{
+    display: flex;
+    align-items: center;
+  }
+}
